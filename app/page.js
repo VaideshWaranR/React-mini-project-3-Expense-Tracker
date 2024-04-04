@@ -27,7 +27,7 @@ const page=()=>{
       trans:[]
     });
   return (
-    <div className="ml-0 w-[70%] bg-zinc-100 h-full">
+    <div className="ml-0 w-[70%] bg-white backdrop-filter backdrop-blur-lg bg-opacity-10 rounded-xl h-full mt-3">
       <Header />
       <Container arr={state.trans}/>
       <IncomeExpenses arr={state.trans}/>

@@ -11,7 +11,7 @@ function AddTransaction({dispatch,num}) {
   };
   return (
     <form
-      className="ml-[10%] sm:w-[80%] w-[60%] p-2 h-[42%] flex flex-col bg-zinc-300 rounded-xl "
+      className="ml-[10%] sm:w-[80%] w-[60%] p-2 h-[42%] flex flex-col  bg-white backdrop-filter backdrop-blur-lg bg-opacity-20 rounded-xl "
     >
       <h1 className=" text-xl font-semibold tracking-tight">
         Add New Transactions
@@ -20,7 +20,7 @@ function AddTransaction({dispatch,num}) {
       <div className="mt-y">
         <h1 className=" text-lg font-semibold">Text</h1>
         <input
-          className="w-full my-1 h-11 rounded-md p-2"
+          className=" rounded-lg border-b-2 border-b-zinc-100 w-full my-1 h-11  p-2"
           type="text"
           placeholder="Enter your text"
           value={text}
@@ -40,7 +40,7 @@ function AddTransaction({dispatch,num}) {
           onChange={(e) => setprice(e.target.value)}
         ></input>
       </div>
-      <button onClick={adding} className="mt-2 rounded-md w-full h-11 py-2 bg-green-500 text-white text-sm font-semibold cursor-pointer">
+      <button onClick={adding} className="mt-2 rounded-md w-full h-11 py-2 bg-green-600 text-white text-sm font-semibold cursor-pointer">
         Add Transactions
       </button>
     </form>

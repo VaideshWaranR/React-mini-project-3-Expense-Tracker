@@ -2,7 +2,7 @@ import React from "react";
 import { ImCancelCircle } from "react-icons/im";
 function TransactionList({ arr, dispatch }) {
   return (
-    <div className="p-2 my-5 ml-[10%] sm:w-[80%] w-[60%] bg-zinc-200 rounded-lg ">
+    <div className="p-2 my-5 ml-[10%] sm:w-[80%] w-[60%] bg-white backdrop-filter backdrop-blur-lg bg-opacity-15 rounded-lg ">
       <h3 className="text-lg font-bold mb-1">History</h3>
       <hr className="border-zinc-600 border-[1px]"></hr>
       {arr.length!=0?<ul>
@@ -15,10 +15,10 @@ function TransactionList({ arr, dispatch }) {
               >
                <ImCancelCircle size={"2em"}/>
               </button>
-              <div className="rounded-lg h-18 px-5 py-5 bg-black mt-2 border-red-500 border-r-8  w-[100%]">
+              <div className="rounded-lg h-18 px-5 py-5 bg-zinc-300 bg-opacity-20 mt-2 border-red-500 border-r-8  w-[100%]">
                 <li className="flex p-2 justify-between font-semibold">
                   <h1 className="text-white">{trans.text}</h1>
-                  <p className="text-red-500">-${Math.abs(trans.price)}</p>
+                  <p className="text-red-900 text-lg font-semibold">-${Math.abs(trans.price)}</p>
                 </li>
               </div>
             </div>
@@ -30,10 +30,10 @@ function TransactionList({ arr, dispatch }) {
               >
                <ImCancelCircle size={"2em"}/>
               </button>
-              <div className="h-18 p-5 rounded-lg bg-black mt-2 border-green-500 border-r-8  w-[100%]">
+              <div className="h-18 p-5 rounded-lg bg-zinc-300 bg-opacity-20 mt-2 border-green-500 border-r-8  w-[100%]">
                 <li className="flex p-2 justify-between font-semibold">
-                  <h1 className="text-white">{trans.text}</h1>
-                  <p className="text-green-500">+${Math.abs(trans.price)}</p>
+                  <h1 className="text-white text-lg">{trans.text}</h1>
+                  <p className="text-green-900 text-lg font-semibold">+${Math.abs(trans.price)}</p>
                 </li>
               </div>
             </div>
